@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 2em auto;
+    background: #f7f9fb;
+}
+form label {
+    display: block;
+    margin: 0.5em 0;
+}
+#outputs {
+    margin-top: 2em;
+}
+canvas {
+    margin-top: 1em;
+    background: #fff;
+    border: 1px solid #ccc;
+}

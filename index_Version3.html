@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Key Rate Duration & Bond Risk Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Key Rate Duration, Macaulay Duration, & Convexity Calculator</h1>
+    <form id="bondForm">
+        <label>Face Value: <input type="number" id="faceValue" value="1000"></label>
+        <label>Coupon Rate (%): <input type="number" id="couponRate" step="0.01" value="5"></label>
+        <label>Maturity Date: <input type="date" id="maturityDate"></label>
+        <label>Yield to Maturity (%): <input type="number" id="ytm" step="0.01"></label>
+        <button type="button" id="fetch10y">Fetch Current (10Y) Yield</button>
+        <label>Payments per Year: 
+            <select id="freq">
+                <option value="1">Annual</option>
+                <option value="2" selected>Semi-Annual</option>
+                <option value="4">Quarterly</option>
+            </select>
+        </label>
+        <button type="submit">Calculate</button>
+    </form>
+    <div id="outputs">
+        <h2>Results</h2>
+        <div id="results"></div>
+        <canvas id="priceYieldChart"></canvas>
+        <canvas id="keyRateChart"></canvas>
+    </div>
+    <script src="fred.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
